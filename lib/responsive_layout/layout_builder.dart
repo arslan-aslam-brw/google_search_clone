@@ -10,7 +10,7 @@ class IsLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, constraints) {
-        if (constraints.maxWidth <= 500) {
+        if (constraints.maxWidth <= 850) {
           return ismobile;
         } else {
           return isWeb;
