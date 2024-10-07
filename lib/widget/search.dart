@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_search_clone/constant/colors.dart';
 
@@ -22,8 +21,8 @@ class Search extends StatelessWidget {
         const SizedBox(
           height: 20,
         ),
-        Container(
-          width: size.width * 0.53,
+        SizedBox(
+          width: size.width > 850 ? size.width * 0.53 : size.width * 0.9,
           height: size.height * 0.08,
           child: TextFormField(
             decoration: InputDecoration(
@@ -45,15 +44,34 @@ class Search extends StatelessWidget {
                   color: searchBorder,
                 ),
               ),
-              suffixIcon: Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 2.0, vertical: 2.0),
-                child: IconButton(
-                  onPressed: () {},
-                  icon: SvgPicture.asset(
-                    'assets/images/mic-icon.svg',
+              suffixIcon: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(left: 2.0, top: 2.0, bottom: 2),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: SvgPicture.asset(
+                        'assets/images/mic-icon.svg',
+                      ),
+                    ),
                   ),
-                ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.only(right: 2.0, top: 2.0, bottom: 2),
+                    child: IconButton(
+                      onPressed: () {},
+                      icon: SvgPicture.asset(
+                        color: Colors.blue,
+                        width: size.width > 850
+                            ? size.width * 0.03
+                            : size.width * 0.08,
+                        'assets/images/google-lens.svg',
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),

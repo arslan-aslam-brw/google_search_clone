@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_search_clone/constant/colors.dart';
 import 'package:google_search_clone/web/search_button.dart';
+import 'package:google_search_clone/web/web_footer.dart';
 import 'package:google_search_clone/widget/search.dart';
+import 'package:google_search_clone/widget/translation_buttons.dart';
 
 class WebLayout extends StatelessWidget {
   const WebLayout({super.key});
@@ -82,8 +84,13 @@ class WebLayout extends StatelessWidget {
                           height: 20,
                         ),
                         WebSearchButtons(),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        TranslationButton(),
                       ],
                     ),
+                    WebFooter(),
                   ],
                 ),
               ),
