@@ -24,10 +24,11 @@ class MobileLayout extends StatelessWidget {
             ),
           ),
           title: SizedBox(
-            width: size.width * 0.39,
+            width: size.width * 3.9,
             child: const DefaultTabController(
                 length: 2,
                 child: TabBar(
+                    dividerHeight: 0,
                     indicatorColor: Colors.blue,
                     labelColor: Colors.blue,
                     unselectedLabelColor: Colors.grey,

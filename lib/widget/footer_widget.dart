@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_search_clone/constant/colors.dart';
 
 class FooterWidget extends StatelessWidget {
   final String title;
