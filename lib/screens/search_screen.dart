@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_search_clone/constant/colors.dart';
+import 'package:google_search_clone/widget/search_footer.dart';
 import 'package:google_search_clone/widget/search_header.dart';
 import 'package:google_search_clone/widget/search_tabs.dart';
 
@@ -32,13 +33,47 @@ class SearchScreen extends StatelessWidget {
             Divider(
               thickness: 1,
               height: 0,
-            )
+            ),
+
+            SizedBox(
+              height: 25,
+            ),
 
             /// search time widget
 
             /// Search Results widget
 
+            /// Next < Previous Buttons,,P   Paginations
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Text(
+                  '<Prev',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(
+                  width: 30,
+                ),
+                Text(
+                  'Next>',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+
             /// Search Footer widget
+            SizedBox(
+              height: 20,
+            ),
+            SearchFooter(),
           ],
         ),
       ),
