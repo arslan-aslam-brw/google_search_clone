@@ -43,7 +43,7 @@ class SearchScreen extends StatelessWidget {
 
             /// Search Results widget
 
-            /// Next < Previous Buttons,,P   Paginations
+            /// Next < Previous Buttons,,  Paginations
 
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
